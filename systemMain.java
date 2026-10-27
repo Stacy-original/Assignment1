@@ -19,11 +19,10 @@ public class systemMain {
         userList.add(new Employee(1, "Stas", "stas@gmail.com", "mypass"));
         userList.add(new Customer(2, "kasyak", "kasyak@gmail.com", "mypass"));
 
-        System.out.println("Demo employee: stas@gmail.com / mypass");
-        System.out.println("Demo customer: kasyak@gmail.com / mypass");
+        System.out.println("Welcome!");
+        System.out.println("Try: kasyak@gmail.com / mypass");
 
         loginMenu();
-        input.close();
     }
 
     private static void loginMenu() {
@@ -57,8 +56,7 @@ public class systemMain {
         String password = readText("Password: ");
 
         for (User user : userList) {
-            if (user.getEmail().equalsIgnoreCase(email)
-                    && user.checkPassword(password)) {
+            if (user.getEmail().equalsIgnoreCase(email) && user.checkPassword(password)) {
                 System.out.println("Welcome, " + user.getName() + "!");
                 return user;
             }
@@ -105,9 +103,7 @@ public class systemMain {
                 case 2 -> placeOrder(customer);
                 case 3 -> viewOrders(customer);
                 case 4 -> customer.printAccountDetails();
-                case 0 -> {
-                    return;
-                }
+                case 0 -> {return;}
             }
         }
     }
@@ -127,9 +123,7 @@ public class systemMain {
                 }
             }
 
-            if (!exists) {
-                break;
-            }
+            if (!exists) {break;}
 
             System.out.println("This email is already registered.");
         }
@@ -140,13 +134,13 @@ public class systemMain {
         System.out.println("2. Employee");
         int type = readInt("Account type: ", 1, 2);
 
+        // Get next ID
         int id = userList.stream()
                 .mapToInt(User::getId)
                 .max()
                 .orElse(0) + 1;
 
         User user;
-
         if (type == 1) {
             user = new Customer(id, name, email, password);
         } else {
