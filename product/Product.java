@@ -1,4 +1,4 @@
-package cict.assignment1;
+package cict.assignment1.product;
 
 public class Product {
     private int id;

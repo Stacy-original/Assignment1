@@ -1,4 +1,13 @@
-package cict.assignment1;
+package cict.assignment1.main;
+
+import cict.assignment1.order.Order;
+import cict.assignment1.product.Book;
+import cict.assignment1.product.Clothing;
+import cict.assignment1.product.Electronics;
+import cict.assignment1.product.Product;
+import cict.assignment1.user.Customer;
+import cict.assignment1.user.Employee;
+import cict.assignment1.user.User;
 
 import java.util.ArrayList;
 import java.util.Collections;

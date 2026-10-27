@@ -1,4 +1,4 @@
-package cict.assignment1;
+package cict.assignment1.user;
 
 public class User {
     private int id;

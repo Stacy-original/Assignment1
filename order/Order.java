@@ -1,4 +1,6 @@
-package cict.assignment1;
+package cict.assignment1.order;
+
+import cict.assignment1.product.Product;
 
 import java.util.ArrayList;
 import java.util.List;

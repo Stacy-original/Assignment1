@@ -1,4 +1,4 @@
-package cict.assignment1;
+package cict.assignment1.user;
 
 public class Employee extends User {
     public Employee(int id, String name, String email, String password) {
