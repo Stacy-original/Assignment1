@@ -50,20 +50,19 @@ public class Order {
     }
 
     public void printReceipt() {
-        System.out.println("\n========== RECEIPT ==========");
+        System.out.println("\n=== RECEIPT ===");
         System.out.println("Order ID: " + orderID);
         System.out.println("Customer ID: " + customerID);
 
         for (Product product : productList) {
-            System.out.printf(
-                    "%s (%s) - %.2f%n",
-                    product.getName(),
-                    product.getType(),
-                    product.getPrice()
+            System.out.println(
+                    product.getName() + "\n" +
+                    product.getType() + "\n" +
+                    String.format("%.2f", product.getPrice())
             );
         }
 
-        System.out.printf("Total: %.2f%n", totalAmount);
+        System.out.println("Total:" + totalAmount);
         System.out.println("=============================");
     }
 }

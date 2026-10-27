@@ -195,7 +195,7 @@ public class systemMain {
 
         for (Product product : productList) {
             product.displayInfo();
-            System.out.println("--------------------");
+            System.out.println("-----------------------");
         }
     }
 
