@@ -341,7 +341,7 @@ public class systemMain {
             System.out.print(prompt);
 
             try {
-                int value = Integer.parseInt(input.nextLine().trim());
+                int value = input.nextInt();
 
                 if (value >= min && value <= max) {
                     return value;
@@ -357,9 +357,8 @@ public class systemMain {
     private static double readPrice() {
         while (true) {
             System.out.print("Price: ");
-
             try {
-                double price = Double.parseDouble(input.nextLine().trim());
+                double price = input.nextDouble();
 
                 if (Double.isFinite(price) && price >= 0) {
                     return price;
